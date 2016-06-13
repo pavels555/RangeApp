@@ -1,0 +1,26 @@
+<!--<span moment-picker="ctrl.pickerDate" change="ctrl.change(newValue, oldValue)" format="{{ctrl.format}}" locale="{{ctrl.locale}}"
+    max-view="month" start-view="month">
+    click here to select date!
+        </span>
+<md-input-container>
+
+    <label>תאריך התחלה</label>
+
+    <div class="input-height">
+        <input name="datePicker" type="text" ng-model="ctrl.pickerDate" ng-model-options="{ updateOn: 'blur' }" ng-change="ctrl.change(ctrl.pickerDate, '{{ctrl.pickerDate}}')">
+    </div>
+
+</md-input-container>-->
+
+<span moment-picker="ctrl.date" max-view="month" start-view="month" format="YYYY-MM-DDTHH:mm:ssZ">
+    click here to select date!
+        </span>
+<md-input-container>
+
+    <label>תאריך התחלה</label>
+
+    <div class="input-height">
+        <input name="datePicker" type="text" model-override ng-model="ctrl.date" ng-model-options="{ updateOn: 'blur' }">
+    </div>
+
+</md-input-container>

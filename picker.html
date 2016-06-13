@@ -1,0 +1,21 @@
+<div layout="row">
+    <md-input-container class="datepicker-input md-block">
+        <div class="input-height" moment-picker="ctrl.dates.start" max-date="ctrl.dates.end" locale="he" format="L" max-view="month"
+            start-view="month">
+            <label>תאריך התחלה</label>
+            <input name="description" ng-model="ctrl.dates.start" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+    </md-input-container>
+    <md-input-container class="datepicker-input md-block">
+        <div class="input-height" moment-picker="ctrl.dates.end" min-date="ctrl.dates.start" locale="he" format="L" max-view="month"
+            start-view="month">
+            <label>תאריך סיום</label>
+            <input name="description" ng-model="ctrl.dates.end" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+
+    </md-input-container>
+    <div ng-messages="projectForm.description.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+    </div>
+</div>
